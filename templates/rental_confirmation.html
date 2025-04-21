@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rental Confirmation</title>
+</head>
+<body>
+    <h2>✅ Rental Successful!</h2>
+
+    <div style="background-color: #fff3cd; padding: 15px; border-left: 6px solid #ffc107;">
+        <strong>REMEMBER YOUR RENTAL ID:</strong> <span style="font-size: 20px;">{{ rental_id }}</span><br>
+        You’ll need this to return the vehicle. Don’t lose it!
+    </div>
+    <br>
+
+    <h3>Vehicle Details</h3>
+    <ul>
+        <li><strong>Vehicle Number:</strong> {{ vehicle[0] }}</li>
+        <li><strong>Owner Name:</strong> {{ vehicle[1] }}</li>
+        <li><strong>Type:</strong> {{ vehicle[2] }}</li>
+        <li><strong>Company:</strong> {{ vehicle[3] }}</li>
+        <li><strong>Model:</strong> {{ vehicle[4] }}</li>
+        <li><strong>Rent per Day:</strong> ₹{{ vehicle[5] }}</li>
+    </ul>
+
+    <h3>Renter Details</h3>
+    <ul>
+        <li><strong>Name:</strong> {{ renter_name }}</li>
+        <li><strong>Age:</strong> {{ renter_age }}</li>
+        <li><strong>Gender:</strong> {{ renter_gender }}</li>
+        <li><strong>Start Time:</strong> {{ start_time }}</li>
+    </ul>
+</body>
+</html>

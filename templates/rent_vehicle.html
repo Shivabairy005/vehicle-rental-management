@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rent a Vehicle</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 90%;
+            margin: auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        a {
+            color: white;
+            background-color: #28a745;
+            padding: 6px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        a:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Available Vehicles for Rent</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Vehicle No</th>
+                <th>Owner Name</th>
+                <th>Vehicle Type</th>
+                <th>Company</th>
+                <th>Model</th>
+                <th>Rent Per Day</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for vehicle in vehicles %}
+            <tr>
+                <td>{{ vehicle[0] }}</td>
+                <td>{{ vehicle[1] }}</td>
+                <td>{{ vehicle[2] }}</td>
+                <td>{{ vehicle[3] }}</td>
+                <td>{{ vehicle[4] }}</td>
+                <td>{{ vehicle[5] }}</td>
+                <td><a href="/rent/{{ vehicle[0] }}">Rent</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VRM</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <p class="title">Vehicle Rental Management
+        </p>
+        <h1 class="subtitle">VRM</h1>
+
+        <div class="button-row">
+            <div class="button-column">
+                <a href="/give-to-rent" class="btn blue">Give to Rent</a>
+                <p class="under-text">If you want to <a href="/delete-vehicle">Remove</a> vehicle</p>
+            </div>
+            <div class="button-column">
+                <a href="/rent-vehicle" class="btn blue">Rent Vehicle</a>
+                <p class="under-text"><a href="/return-vehicle">Pay Rent</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
